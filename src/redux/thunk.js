@@ -10,6 +10,5 @@ export const addContactsThunk = createAsyncThunk('contacts/add', async obj => {
 });
 
 export const delContactsThunk = createAsyncThunk('contacts/del', async id => {
-  console.log(id);
   return await delContact(id);
 });

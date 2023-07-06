@@ -1,10 +1,10 @@
 
 import { toast } from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
-import { setFilter } from "redux/filterSlice";
+import { setFilter } from "redux/filter/filterSlice";
 
 import { useEffect } from "react";
-import { addContactsThunk, delContactsThunk, getContactsThunk } from "redux/thunk";
+import { addContactsThunk, delContactsThunk, getContactsThunk } from "redux/contacts/thunk";
 import { ContactForm } from "components/ContactFrom/ContactForm";
 import { Filter } from "components/Filter/Filter";
 import { ContactList } from "components/ContactList/ContactList";

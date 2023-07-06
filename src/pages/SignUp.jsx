@@ -31,7 +31,7 @@ export const SignUp = () => {
       </div>
       <div>
         <label htmlFor="userPassword">Password</label>
-        <input id="userPassword" minLength="7" maxLength="20" type="password" name="password" required />
+        <input id="userPassword" autoComplete="false" minLength="7" maxLength="20" type="password" name="password" required />
       </div>
       <button type="submit">Submit</button>
     </form>

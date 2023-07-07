@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PropTypes from 'prop-types';
+import { StyledForm } from "./contactForm.styled";
 
 
 export const ContactForm = ({saveContact}) => {
@@ -27,7 +28,7 @@ export const ContactForm = ({saveContact}) => {
   }
 
     return (
-    <form onSubmit={submitForm}>
+    <StyledForm onSubmit={submitForm}>
       <div>
         <label htmlFor="userName">Name</label>
         <input onChange={handleChange} id="userName" minLength="3" maxLength="20" type="text" name="name" pattern="^[A-Za-z\u0080-\uFFFF ']+$"
@@ -41,7 +42,7 @@ export const ContactForm = ({saveContact}) => {
           required />
       </div>
       <button type="submit">Add contact</button>
-    </form>
+    </StyledForm>
   )
   
 };

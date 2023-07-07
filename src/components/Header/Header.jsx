@@ -1,20 +1,34 @@
 import { useDispatch, useSelector } from "react-redux"
-import { NavLink } from "react-router-dom"
 import { logOutThunk } from "redux/auth/thunk"
+import { AuthHeaderWrapper, HeaderContainer, LogOutBtn, NavList, NavStylesLink, StyledHeader, StyledLink } from "./header.styled"
+import Lottie from 'lottie-react';
+import animationData from '../../lottie/mobile.json';
+
 
 export const Header = () => {
   const logInCheck = useSelector(state => state.auth.isLoggedIn)
   const dispatch = useDispatch()
 
   return (
-    <header>
+    <StyledHeader>
+      <HeaderContainer>
+        <StyledLink to='/'>
+          <Lottie animationData={animationData} style={{ width: '25%', height: '25%' }} />
+          <h1>DialDex</h1>
+        </StyledLink>
+      
       {logInCheck
-        ? <><NavLink to='/phone-book'>book</NavLink><button onClick={()=> dispatch(logOutThunk())}>log out</button></>
-        : <ul>
-            <li><NavLink to='/registration'>Sign up</NavLink></li>
-            <li><NavLink to='/log-in'>Log in</NavLink></li> 
-         </ul>
+        ? <AuthHeaderWrapper>
+            <NavStylesLink to='/phone-book'>Phone book</NavStylesLink>
+            <LogOutBtn onClick={() => dispatch(logOutThunk())}>Log out</LogOutBtn>
+          </AuthHeaderWrapper>
+        : <NavList>
+            <li><NavStylesLink to='/registration'>Sign up</NavStylesLink></li>
+            <li><NavStylesLink to='/log-in'>Log in</NavStylesLink></li> 
+         </NavList>
       }
-    </header>
+      </HeaderContainer>
+      
+    </StyledHeader>
   )
 }

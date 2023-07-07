@@ -13,7 +13,7 @@ const authInitialState = {
   isLoading: false,
 };
 
-const thunkArr = [registerThunk, logInThunk, logOutThunk];
+const thunkArr = [registerThunk, logInThunk, logOutThunk, refreshUserThunk];
 
 const handleMatches = type => thunkArr.map(thunk => thunk[type]);
 
@@ -22,11 +22,9 @@ const handelPending = state => {
 };
 const handelRejected = state => {
   state.isLoading = false;
-  state.error = 'error';
 };
 const handelFulfilled = state => {
   state.isLoading = false;
-  state.error = '';
 };
 
 const authSlice = createSlice({
@@ -52,10 +50,6 @@ const authSlice = createSlice({
       .addCase(refreshUserThunk.fulfilled, (state, action) => {
         state.user = action.payload.user;
         state.isLoggedIn = true;
-        state.isLoading = false;
-      })
-      .addCase(refreshUserThunk.pending, state => {
-        state.isLoading = true;
       })
       .addMatcher(isAnyOf(...handleMatches('pending')), handelPending)
       .addMatcher(isAnyOf(...handleMatches('rejected')), handelRejected)

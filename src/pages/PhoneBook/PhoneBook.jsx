@@ -6,9 +6,10 @@ import { setFilter } from "redux/filter/filterSlice";
 import { useEffect } from "react";
 import { addContactsThunk, delContactsThunk, getContactsThunk } from "redux/contacts/thunk";
 import { ContactForm } from "components/ContactFrom/ContactForm";
-import { Filter } from "components/Filter/Filter";
+import { Filter } from "components/Filter/Filter.jsx";
 import { ContactList } from "components/ContactList/ContactList";
 import { Loader } from "components/Loader/Loader";
+import { ContactsWrapper, PhoneBookWrapper, Reminder } from "./phoneBook.styled";
 
 export const PhoneBook = () => {  
   const dispatch = useDispatch()
@@ -33,17 +34,16 @@ export const PhoneBook = () => {
   const filterContacts = (evt) => dispatch(setFilter(evt.target.value.trim()));
 
   return (
-    <div>
-      <h1>Phonebook</h1>
+    <PhoneBookWrapper>
       <ContactForm saveContact={saveContact} />
 
       {contacts.length
-        ? <><h2>Contacts</h2>
+        ? <ContactsWrapper><h2>Contacts</h2>
             <Filter filterValue={filterContacts} />
             <ContactList deleteContact={removeContact} contacts={contacts.filter(obj => obj.name.toLowerCase().includes(filter.toLowerCase()))} />
-          </>
-        : <p>Add some contacts</p>}
+          </ContactsWrapper>
+        : <Reminder>Add some contacts</Reminder>}
       {loader && <Loader />}
-    </div>
+    </PhoneBookWrapper>
   );
 };

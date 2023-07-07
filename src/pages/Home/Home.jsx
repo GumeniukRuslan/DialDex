@@ -21,8 +21,8 @@ export const Home = () => {
     <Wrapper>
       <Lottie animationData={animationData} style={{ width: '25%', height: '25%' }} />
       <motion.h1 variants={variants} initial="swing" animate="swing">
-      Make a call
-    </motion.h1>
+        Make a call
+      </motion.h1>
     </Wrapper>
     
   )

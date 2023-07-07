@@ -7,6 +7,8 @@ import animationData from '../../lottie/mobile.json';
 
 export const Header = () => {
   const logInCheck = useSelector(state => state.auth.isLoggedIn)
+  const name = useSelector(state => state.auth.user.name)
+  const email = useSelector(state => state.auth.user.email)
   const dispatch = useDispatch()
 
   return (
@@ -18,7 +20,10 @@ export const Header = () => {
         </StyledLink>
       
       {logInCheck
-        ? <AuthHeaderWrapper>
+          ? <AuthHeaderWrapper>
+            <div>
+              <p>Hi {name}! {`(${email})`}</p>
+            </div>
             <NavStylesLink to='/phone-book'>Phone book</NavStylesLink>
             <LogOutBtn onClick={() => dispatch(logOutThunk())}>Log out</LogOutBtn>
           </AuthHeaderWrapper>

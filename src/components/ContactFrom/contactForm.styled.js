@@ -1,12 +1,15 @@
 import { styled } from 'styled-components';
 
 export const StyledForm = styled.form`
-  width: 600px;
   background-color: #ffffff;
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
+
+  @media screen and (min-width: 480px) {
+    width: 600px;
+  }
 
   div {
     margin-bottom: 25px;

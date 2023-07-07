@@ -7,9 +7,20 @@ import { LogIn } from "pages/LogIn";
 import { Home } from "pages/Home";
 import { RestrictedRoute } from "./RestrictedRoute";
 import { PrivateRoute } from "./PrivateRoute";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { refreshUserThunk } from "redux/auth/thunk";
+import { Loader } from "./Loader/Loader";
 
 export const App = () => {
+  const dispatch = useDispatch();
+  const  isRefreshing  = useSelector(state => state.auth.isLoading);
+
+  useEffect(() => {
+    dispatch(refreshUserThunk());
+  }, [dispatch]);
   return (
+    isRefreshing ? <Loader/> :
     <>
       <Routes>
         <Route path="/" element={<SharedLayout />}>

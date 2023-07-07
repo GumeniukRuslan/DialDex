@@ -9,6 +9,7 @@
 }
 body{
   background-color: #caefcb;
+  padding-bottom: 5px;
 }
 ul,ol{
   list-style: none;

@@ -48,7 +48,7 @@ const authSlice = createSlice({
         state.isLoggedIn = false;
       })
       .addCase(refreshUserThunk.fulfilled, (state, action) => {
-        state.user = action.payload.user;
+        state.user = action.payload;
         state.isLoggedIn = true;
       })
       .addMatcher(isAnyOf(...handleMatches('pending')), handelPending)

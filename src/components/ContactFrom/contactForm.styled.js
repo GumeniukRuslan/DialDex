@@ -1,4 +1,5 @@
 import { styled } from 'styled-components';
+import { MdOutlineContacts } from 'react-icons/md';
 
 export const StyledForm = styled.form`
   background-color: #ffffff;
@@ -26,15 +27,15 @@ export const StyledForm = styled.form`
   input {
     width: 100%;
     padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
     font-size: 16px;
     color: #333;
     box-sizing: border-box;
   }
 
   button {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 30%;
     margin: auto;
     padding: 10px;
@@ -55,4 +56,10 @@ export const NavList = styled.ul`
   display: flex;
   justify-content: center;
   gap: 20px;
+`;
+export const ContactIcon = styled(MdOutlineContacts)`
+  fill: white;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
 `;

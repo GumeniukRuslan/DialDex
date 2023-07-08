@@ -26,11 +26,10 @@ button{
   font-size: 16px;
 }
 
-
-
-
-
-/* ------------------ */
+input{
+  border: 1px solid #4caf50;
+  border-radius: 8px;
+}
 
 
 

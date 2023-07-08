@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PropTypes from 'prop-types';
-import { StyledForm } from "./contactForm.styled";
+import { ContactIcon, StyledForm } from "./contactForm.styled";
 
 
 export const ContactForm = ({saveContact}) => {
@@ -41,7 +41,7 @@ export const ContactForm = ({saveContact}) => {
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required />
       </div>
-      <button type="submit">Add contact</button>
+      <button type="submit"> <ContactIcon/>Add contact</button>
     </StyledForm>
   )
   

@@ -28,7 +28,8 @@ export const App = () => {
             <Route index element={<Home />}/>
             <Route path="registration" element={<RestrictedRoute redirectTo="/phone-book" component={<SignUp />} />}/>
             <Route path="log-in" element={<RestrictedRoute redirectTo="/phone-book" component={<LogIn />} />}/>
-            <Route path="phone-book" element={<PrivateRoute redirectTo="/log-in" component={<PhoneBook />}/>}/>
+            <Route path="phone-book" element={<PrivateRoute redirectTo="/log-in" component={<PhoneBook />} />} />
+            <Route path="*" element={<Home />}/>
           </Route>
         </Routes>
         

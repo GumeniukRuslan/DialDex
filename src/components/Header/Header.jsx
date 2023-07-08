@@ -22,7 +22,7 @@ export const Header = () => {
       {logInCheck
           ? <AuthHeaderWrapper>
             <div>
-              <p>Hi {name}! {`(${email})`}</p>
+              <p>Hi, {name}! {`(${email})`}</p>
             </div>
             <NavStylesLink to='/phone-book'>Phone book</NavStylesLink>
             <LogOutBtn onClick={() => dispatch(logOutThunk())}>Log out</LogOutBtn>

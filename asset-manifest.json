@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/DialDex/static/css/main.a684bc85.css",
-    "main.js": "/DialDex/static/js/main.90cc43ab.js",
+    "main.js": "/DialDex/static/js/main.59b1d36b.js",
     "index.html": "/DialDex/index.html",
     "main.a684bc85.css.map": "/DialDex/static/css/main.a684bc85.css.map",
-    "main.90cc43ab.js.map": "/DialDex/static/js/main.90cc43ab.js.map"
+    "main.59b1d36b.js.map": "/DialDex/static/js/main.59b1d36b.js.map"
   },
   "entrypoints": [
     "static/css/main.a684bc85.css",
-    "static/js/main.90cc43ab.js"
+    "static/js/main.59b1d36b.js"
   ]
 }

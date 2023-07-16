@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/goit-react-hw-08-phonebook/static/css/main.a684bc85.css",
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.80383a57.js",
-    "index.html": "/goit-react-hw-08-phonebook/index.html",
-    "main.a684bc85.css.map": "/goit-react-hw-08-phonebook/static/css/main.a684bc85.css.map",
-    "main.80383a57.js.map": "/goit-react-hw-08-phonebook/static/js/main.80383a57.js.map"
+    "main.css": "/DialDex/static/css/main.a684bc85.css",
+    "main.js": "/DialDex/static/js/main.90cc43ab.js",
+    "index.html": "/DialDex/index.html",
+    "main.a684bc85.css.map": "/DialDex/static/css/main.a684bc85.css.map",
+    "main.90cc43ab.js.map": "/DialDex/static/js/main.90cc43ab.js.map"
   },
   "entrypoints": [
     "static/css/main.a684bc85.css",
-    "static/js/main.80383a57.js"
+    "static/js/main.90cc43ab.js"
   ]
 }

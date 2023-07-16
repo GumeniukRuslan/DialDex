@@ -9,9 +9,7 @@ export const StyledContact = styled.div`
   } 
 `;
 export const ContactNumber = styled.a`
-  
   transition: color 0.3s ease;
-
   &:hover {
     color: #4caf50;
   }

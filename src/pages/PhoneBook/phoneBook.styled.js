@@ -20,12 +20,13 @@ export const ContactsWrapper = styled.div`
   gap: 10px;
   justify-content: center;
   align-items: center;
+  width: 90%;
   background-color: rgba(255, 255, 255, 0.908);
   padding: 20px 40px;
   border-radius: 8px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 600px) {
     width: 600px;
   }
 
@@ -65,6 +66,10 @@ export const ContactsWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media screen and (max-width: 305px) {
+      flex-direction: column;
+      gap: 5px;
+    } 
   }
 
   button {

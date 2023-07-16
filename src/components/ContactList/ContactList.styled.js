@@ -1,13 +1,23 @@
 import { styled } from 'styled-components';
 import { BsTrash } from 'react-icons/bs';
 
+export const StyledContact = styled.div`
+ @media screen and (max-width: 305px) {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  } 
+`;
 export const ContactNumber = styled.a`
-  margin-left: 5px;
+  
   transition: color 0.3s ease;
 
   &:hover {
     color: #4caf50;
   }
+  @media screen and (min-width: 306px) {
+    margin-left: 5px;
+  } 
 `;
 
 export const DelBtn = styled.button`

@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
 import { logOutThunk } from "redux/auth/thunk"
-import { AuthHeaderWrapper, HeaderContainer, LogOutBtn, NavList, NavStylesLink, StyledHeader, StyledLink } from "./header.styled"
-import Lottie from 'lottie-react';
+import { AuthHeaderWrapper, Greetings, HeaderContainer, LogOutBtn, NavList, NavStylesLink, StyledHeader, StyledLink, StyledLottie } from "./header.styled"
 import animationData from '../../lottie/mobile.json';
 
 
@@ -15,15 +14,15 @@ export const Header = () => {
     <StyledHeader>
       <HeaderContainer>
         <StyledLink to='/'>
-          <Lottie animationData={animationData} style={{ width: '25%', height: '25%' }} />
+          <StyledLottie animationData={animationData} style={{ width: '25%', height: '25%' }} />
           <h1>DialDex</h1>
         </StyledLink>
       
       {logInCheck
           ? <AuthHeaderWrapper>
-            <div>
-              <p>Hi, {name}! {`(${email})`}</p>
-            </div>
+            <Greetings>
+              <p>Hi, {name}! <span>{`(${email})`}</span></p>
+            </Greetings>
             <NavStylesLink to='/phone-book'>Phone book</NavStylesLink>
             <LogOutBtn onClick={() => dispatch(logOutThunk())}>Log out</LogOutBtn>
           </AuthHeaderWrapper>

@@ -3,13 +3,15 @@ import { MdOutlineContacts } from 'react-icons/md';
 
 export const StyledForm = styled.form`
   background-color: #ffffff;
-  padding: 30px;
+  padding: 15px;
   border-radius: 15px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
+  width: 90%;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 600px) {
     width: 600px;
+    padding: 30px;
   }
 
   div {
@@ -36,7 +38,7 @@ export const StyledForm = styled.form`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30%;
+
     margin: auto;
     padding: 10px;
     border-radius: 5px;
@@ -50,6 +52,10 @@ export const StyledForm = styled.form`
     &:focus {
       background-color: #378439;
     }
+    @media screen and (max-width: 230px) {
+    padding: 5px;
+    font-size: 12px;
+  }
   }
 `;
 export const NavList = styled.ul`

@@ -70,7 +70,7 @@ export const NavStylesLink = styled(NavLink)`
   border: none;
   border-radius: 4px;
   color: rgba(255, 255, 255, 0.908);
-  text-wrap: nowrap;
+  white-space: nowrap;
   cursor: pointer;
   font-size: 12px;
   transition: background-color 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s,
@@ -99,7 +99,7 @@ export const LogOutBtn = styled.button`
   background-color: #4caf50;
   padding: 8px;
   border: none;
-  text-wrap: nowrap;
+  white-space: nowrap;
   border-radius: 4px;
   color: rgba(255, 255, 255, 0.908);
   cursor: pointer;

@@ -47,8 +47,8 @@ export const refreshUserThunk = createAsyncThunk(
     try {
       return await refreshUser(_, thunkAPI);
     } catch (error) {
-      const notify = () => toast.error('Something went wrong.');
-      notify();
+      // const notify = () => toast.error('Something went wrong.');
+      // notify();
       return thunkAPI.rejectWithValue(error.message);
     }
   }
